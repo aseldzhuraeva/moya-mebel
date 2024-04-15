@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".ui.home.HomeFragment"
+    android:background="#1B1313"
+    >
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lotty_sale"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="18dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_catalog_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_category" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sale_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        app:cardCornerRadius="28dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lime">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="Скидки до 90 %!!!!!!  "
+                android:textColor="#1F73B6"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:background="#E4E7E8"
+                android:src="@drawable/discount_image" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lotty_discout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="15dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+</LinearLayout>
